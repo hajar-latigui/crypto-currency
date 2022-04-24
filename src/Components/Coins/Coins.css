@@ -1,0 +1,30 @@
+.coin-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 14px #110c14;
+    border-radius: 1rem 1rem;
+    margin: 1rem;
+    padding: .7rem 1rem;
+    font-family: serif;
+    font-style: normal;
+}
+
+.coin-row:hover{
+transform: scale(1.04);
+transition: .3s ease-in-out;
+cursor: pointer;
+box-shadow: 50px 50px 50px 50px #110c14ad;
+}
+
+img{
+    height: 40px;
+    margin-right: 8px;
+    width: auto;
+}
+
+.img-symbol{
+    display: flex;
+    align-items: center;
+    margin-left: -2rem;
+}
