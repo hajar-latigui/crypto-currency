@@ -1,7 +1,4 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Coins from '../Coins/Coins'
-import Coin from '../routes/Coin'
 import './Header.css'
 
 const Header = () => {
@@ -16,13 +13,7 @@ const Header = () => {
             <p>Volume</p>
             <p>Market Cap</p>
             </div>
-            </div>
-           
-                <Routes>
-                <Route path='/' element = {<Coins crypto = {crypto} key = {crypto.id}/>} />
-                <Route path="/coin/" element = {<Coin/>} />
-                <Route path=":coinId" element = {<Coin/>} />
-              </Routes> </div>
+            </div> </div>
   )
 }
 
