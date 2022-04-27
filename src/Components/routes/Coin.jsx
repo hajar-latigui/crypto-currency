@@ -18,7 +18,7 @@ const[coin,setCoin] = useState([])
   },[coinId])
   return (
     <div>
-      
+      {coinId}
     </div>
   )
 }

@@ -8,6 +8,8 @@
     padding: .7rem 1rem;
     font-family: serif;
     font-style: normal;
+    background-color: #32253e;
+    min-width: 600px;
 }
 
 .coin-row:hover{
@@ -26,5 +28,9 @@ img{
 .img-symbol{
     display: flex;
     align-items: center;
-    margin-left: -2rem;
+    margin-left: -5rem;
+}
+
+p{
+    min-width: 100px;
 }
