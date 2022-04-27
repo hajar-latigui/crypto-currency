@@ -14,12 +14,10 @@ const Crypto = (props) =>{
         axios.get(url)
         .then(response => {
           setCrypto(response.data)
-          console.log(response.data);
       }).catch((error)=> {
         console.log(error)
       })
     },[])
-
 
       return ( <><Header/>
           {crypto.map(crypto =>{
@@ -28,7 +26,8 @@ const Crypto = (props) =>{
               <Coins crypto = {crypto}/>
               </Link>
             )
-            })}
+            })
+            }
 
         </>
       )

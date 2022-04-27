@@ -11,7 +11,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element = {<Crypto/>} />
-        <Route path="/coin/:coinId" element = {<Coin/>} />
+        <Route path="/coin/:coinId" element = {<Coin/>}/>
       </Routes>
     </div>
   );

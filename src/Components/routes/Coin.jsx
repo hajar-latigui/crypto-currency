@@ -1,26 +1,35 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect,} from 'react'
 import {useParams } from 'react-router-dom';
+import Chart from '../Chart/Chart';
 
 const Coin = () => {
 let { coinId } = useParams();
-const[coin,setCoin] = useState([])
+let data = { index: [], price: [], volumes: [] };
 
-  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=${coinId}&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+
+  const url = `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=30&interval=daily`;
   useEffect(()=> {
       axios.get(url)
       .then(response => {
-        setCoin(response.data)
-        console.log(response.data);
+        for (const item of response.data.prices) {
+          data.index.push(item[0]);
+          data.price.push(item[1]);
+        }
+        for (const item of response.data.total_volumes) data.volumes.push(item[1]);
     }).catch((error)=> {
       console.log(error)
     })
   },[coinId])
-  return (
-    <div>
-      {coinId}
+
+  return(
+    <>
+    <div className='chartDiv' id='chartDiv'>
+      <Chart data = {data} key = {data.id}/>
     </div>
-  )
+       
+       </>
+)
 }
 
 export default Coin
