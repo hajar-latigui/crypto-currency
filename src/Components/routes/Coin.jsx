@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useEffect, useState} from 'react'
+import React from 'react'
 import {useParams } from 'react-router-dom';
 import Chart from '../Chart/Chart';
 import { useAsync } from "react-async"
